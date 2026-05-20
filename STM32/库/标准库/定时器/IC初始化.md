@@ -20,3 +20,6 @@ IC即输入捕获，当引脚接收跳变，将CNT存到CCR，但是作编码器
 TIM_ICStructInit(&TIM_ICInitStructure);
 ```
 
+# HAL
+
+在cube

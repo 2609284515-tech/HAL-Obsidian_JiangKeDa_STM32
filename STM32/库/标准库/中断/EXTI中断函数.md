@@ -64,3 +64,56 @@ void EXTI1_IRQHandler(void)
 }
 ```
 
+# HAL库
+
+# 消抖版本
+
+```
+//因为抖动所以手写了一个下降沿触发，延时消除抖动
+void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)
+{
+    if (GPIO_Pin == CountSensor_Pin)
+    {
+        Delay_ms(20);
+		if (HAL_GPIO_ReadPin(GPIOB, CountSensor_Pin) == 0)    //下降沿触发
+		{
+			CountSensor_Count ++;
+		}
+    }
+}
+```
+
+# 不需要消抖的版本
+
+```
+void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)
+{
+    if (GPIO_Pin == CountSensor_Pin)
+    {
+		CountSensor_Count ++;
+    }
+}
+```
+
+# 旋转编码器版本
+
+```
+//是旋转编码器中断，其中的Line0是A，Line1是B，顺时针转B的下降沿对应A的低电位，逆时针转A的下降沿对应B的低电位，Count正对应顺时针
+void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)
+{
+    if (GPIO_Pin == Encoder_A_Pin)
+    {
+        if (HAL_GPIO_ReadPin(GPIOB, Encoder_B_Pin) == GPIO_PIN_RESET)
+        {
+            Encoder_Count--;
+        }
+    }
+    else if (GPIO_Pin == Encoder_B_Pin)
+    {
+        if (HAL_GPIO_ReadPin(GPIOB, Encoder_A_Pin) == GPIO_PIN_RESET)
+        {
+            Encoder_Count++;
+        }
+    }
+}
+```

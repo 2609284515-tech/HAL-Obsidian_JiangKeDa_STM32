@@ -11,3 +11,15 @@ void TIM2_IRQHandler(void)
 	}
 }
 ```
+
+# HAL库
+
+```
+void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
+{
+	if (htim->Instance == TIM2)
+	{
+		Num ++;
+	}
+}
+```

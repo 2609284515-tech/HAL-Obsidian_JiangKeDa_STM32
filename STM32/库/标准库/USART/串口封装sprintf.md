@@ -11,3 +11,8 @@ void Serial_Printf(char *format, ...)
 	Serial_SendString(String);
 }
 ```
+
+```
+#include <stdio.h>
+#include <stdarg.h>
+```

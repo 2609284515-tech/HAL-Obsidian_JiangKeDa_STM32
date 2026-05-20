@@ -11,3 +11,7 @@
 	USART_InitStructure.USART_WordLength = USART_WordLength_8b;
 	USART_Init(USART1, &USART_InitStructure);
 ```
+
+# HAL
+
+在cube

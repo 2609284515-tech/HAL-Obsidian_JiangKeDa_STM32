@@ -37,3 +37,11 @@ PWM参数：频率，占空比（高电平占比），分辨率（占空比变�
 PWM频率：	Freq = CK_PSC / (PSC + 1) / (ARR + 1)
 PWM占空比：	Duty = CCR / (ARR + 1)
 PWM分辨率：	Reso = 1 / (ARR + 1)
+
+比如呼吸灯，PSC=720-1，ARR=100，这样频率1kHz
+舵机，频率50Hz，PSC=72-1，ARR=20000-1，这样PCC为微秒
+电机，PSC=36-1，ARR=100-1，这样20kHz
+
+# HAL
+
+在cube

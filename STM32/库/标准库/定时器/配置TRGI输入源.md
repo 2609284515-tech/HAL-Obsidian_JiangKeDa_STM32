@@ -5,3 +5,7 @@
 ```
 
 在TIxFPx中只有TI1FP1和TI2FP2可以触发TRGI
+
+# HAL
+
+在cube

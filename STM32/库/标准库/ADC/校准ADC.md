@@ -6,3 +6,9 @@
 	ADC_StartCalibration(ADC1);
 	while (ADC_GetCalibrationStatus(ADC1) == SET);
 ```
+
+# HAL库
+
+```
+HAL_ADCEx_Calibration_Start(&hadc1);
+```

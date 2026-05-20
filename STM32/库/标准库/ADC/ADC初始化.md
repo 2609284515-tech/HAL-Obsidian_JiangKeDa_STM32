@@ -20,3 +20,7 @@
 /*触发ADC*/
 ADC_SoftwareStartConvCmd(ADC1, ENABLE);
 ```
+
+# HAL
+
+在cube

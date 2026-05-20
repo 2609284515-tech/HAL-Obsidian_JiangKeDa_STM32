@@ -10,3 +10,20 @@ uint16_t AD_GetValue(void)
 ```
 
 可以把[[配置ADC规则组通道]]放在这
+
+# HAL库
+
+```
+uint16_t AD_GetValue(void)
+{
+    uint16_t adcValue;
+
+    HAL_ADC_Start(&hadc1);
+
+    HAL_ADC_PollForConversion(&hadc1, HAL_MAX_DELAY);
+
+    HAL_ADC_Stop(&hadc1);
+
+    return adcValue;
+}
+```

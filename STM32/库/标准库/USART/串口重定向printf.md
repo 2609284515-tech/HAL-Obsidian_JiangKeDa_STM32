@@ -7,3 +7,12 @@ int fputc(int ch, FILE *f)
 	return ch;
 }
 ```
+
+```
+#include <stdio.h>
+#include <stdarg.h>
+```
+
+# HAL
+
+麻烦，直接放弃

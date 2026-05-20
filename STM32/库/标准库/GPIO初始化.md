@@ -20,3 +20,7 @@
 	AF复用（内部外设控制接管ODR）
 		GPIO_Mode_AF_OD
 		GPIO_Mode_AF_PP
+
+# HAL
+
+在cube

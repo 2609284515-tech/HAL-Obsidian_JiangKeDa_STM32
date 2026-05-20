@@ -12,3 +12,14 @@ void MyDMA_Transfer(void)
 }
 ```
 
+# HAL库
+
+```
+//DMA转运
+void MyDMA_Transfer(uint32_t AddrA, uint32_t AddrB, uint32_t MyDMA_Size)
+{
+    HAL_DMA_Start(&hdma_memtomem_dma1_channel1, AddrA, AddrB, MyDMA_Size);
+
+    HAL_DMA_PollForTransfer(&hdma_memtomem_dma1_channel1, HAL_DMA_FULL_TRANSFER, HAL_MAX_DELAY);
+}
+```

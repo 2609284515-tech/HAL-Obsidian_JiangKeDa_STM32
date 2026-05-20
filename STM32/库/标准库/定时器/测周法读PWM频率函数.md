@@ -33,3 +33,13 @@ $$
 在测周法中，$\Delta T = \pm 1/f_0$（$f_0$ 是时标频率，通常高达 MHz 甚至 GHz），而 $T$ 是被测信号的周期（比如 ms 到 μs 级）。比值 $\Delta T / T$ 确实很小，所以微分近似非常精确。
 
 测周法的最小频率就是一个周期CNT刚好记满65535，最大频率取决于需要的相对误差，如千分之一就是一个周期要记大于等于1000个数（忽略误差）
+
+# HAL库
+
+```
+//测周法读PWM频率
+uint32_t IC_GetFreq(void)
+{
+	return 1000000 / (HAL_TIM_ReadCapturedValue(&htim3, TIM_CHANNEL_1) + 1);
+}
+```

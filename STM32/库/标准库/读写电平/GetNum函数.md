@@ -34,3 +34,31 @@ uint8_t KeyNum;
 KeyNum = Key_GetNum();
 ```
 
+# HAL库
+
+```
+uint8_t Key_GetNum(void)
+{
+    uint8_t KeyNum = 0; 
+
+    if (HAL_GPIO_ReadPin(GPIOB, Key_1_Pin) == 0)
+    {
+        HAL_Delay(20);
+        while (HAL_GPIO_ReadPin(GPIOB, Key_1_Pin) == 0);
+        
+        HAL_Delay(20);
+        KeyNum = 1;
+    }
+
+    if (HAL_GPIO_ReadPin(GPIOB, Key_2_Pin) == 0)
+    {
+        HAL_Delay(20);
+        while (HAL_GPIO_ReadPin(GPIOB, Key_2_Pin) == 0);
+        
+        HAL_Delay(20);
+        KeyNum = 2;
+    }
+    
+    return KeyNum;
+}
+```
