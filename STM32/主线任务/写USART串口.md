@@ -22,3 +22,5 @@ BOOT0为1，复位
 STLINK Utility
 Target->option bytes，即选项字节
 ST-STLINK->Firmware update,更旧固件
+
+下一步[[写I2C]]
