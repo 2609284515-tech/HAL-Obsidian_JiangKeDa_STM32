@@ -1,0 +1,9 @@
+#ifndef __MOTOR_H
+#define __MOTOR_H
+
+void Motor_SetSpeed_1(int16_t Speed);
+void Motor_SetSpeed_2(int16_t Speed);
+void Motor_Init(void);
+void Motor_Test(void);
+
+#endif
