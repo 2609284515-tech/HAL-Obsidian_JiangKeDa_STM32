@@ -1,5 +1,5 @@
 # 江科大STM32的Obsidian笔记及其HAL翻译
-目前更新到SPI，又加上CAN和pid
+目前更新到SPI，又加上CAN和pid和平衡车
 笔记以任务为主线，用“需要”结构把一些关键代码串了起来，并且能方便地对比HAL与标准库的区别
 江科大库里是翻译成HAL的江科大文件，都已经运行成功过，且用AI写了注释
 <img width="838" height="723" alt="屏幕截图 2026-05-22 213405" src="https://github.com/user-attachments/assets/d5db2335-7114-41bb-a07e-20456ec73766" />
